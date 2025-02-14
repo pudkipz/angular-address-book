@@ -18,6 +18,9 @@ export class AddComponent {
   constructor() {
     this.contactForm = this.formBuilder.group({
       firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      street: ['', Validators.required],
+      city: ['', Validators.required],
     })
   }
 

@@ -1,1 +1,7 @@
-<p>view works!</p>
+@if (contact) {
+  <h2>{{contact.firstName}} {{contact.lastName}}</h2>
+  <p>{{contact.street}}, {{contact.city}}</p>
+} @else {
+  <p>No contact with that id exists</p>
+}
+

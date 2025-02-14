@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ContactsService } from 'src/app/contacts.service';
+import { Contact } from '../contact';
 
 @Component({
   selector: 'app-view',
@@ -7,5 +10,9 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class ViewComponent {
+  contactService = inject(ContactsService);
+  route = inject(ActivatedRoute);
 
+  id = this.route.snapshot.paramMap.get('id');
+  contact: Contact | null = this.contactService.getContactById(Number(this.id));
 }

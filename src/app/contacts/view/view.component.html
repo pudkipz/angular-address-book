@@ -2,6 +2,7 @@
   <h2>{{contact.firstName}} {{contact.lastName}}</h2>
   <p>{{contact.street}}, {{contact.city}}</p>
   <button routerLink="/contacts/edit/{{contact.id}}">Edit</button>
+  <button (click)="deleteContact()">Delete</button>
 } @else {
   <p>No contact with that id exists</p>
 }

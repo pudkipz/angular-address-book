@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ContactsService } from 'src/app/contacts.service';
 import { Contact } from '../contact';
 
@@ -12,7 +12,13 @@ import { Contact } from '../contact';
 export class ViewComponent {
   contactService = inject(ContactsService);
   route = inject(ActivatedRoute);
+  router = inject(Router);
 
   id = this.route.snapshot.paramMap.get('id');
   contact: Contact | null = this.contactService.getContactById(Number(this.id));
+
+  deleteContact(): void {
+    this.contactService.deleteContactWithId(Number(this.id))
+    this.router.navigate(['contacts'])
+  }
 }

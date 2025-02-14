@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-add',
-  standalone: true,
-  imports: [],
+  standalone: false,
   templateUrl: './add.component.html',
   styleUrl: './add.component.css'
 })

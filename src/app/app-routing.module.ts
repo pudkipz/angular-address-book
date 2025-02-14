@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListComponent } from './contacts/list/list.component';
 import { ViewComponent } from './contacts/view/view.component';
+import { AddComponent } from './contacts/add/add.component';
 
 const routes: Routes = [
   {
@@ -9,13 +10,13 @@ const routes: Routes = [
     component: ListComponent,
   },
   {
-    path: 'contacts/:id',
+    path: 'contacts/view/:id',
     component: ViewComponent,
   },
-  // {
-  //   path: 'contacts/new',
-  //   component:
-  // },
+  {
+    path: 'contacts/new',
+    component: AddComponent,
+  },
 ];
 
 @NgModule({

@@ -14,6 +14,6 @@ import { EditComponent } from './edit/edit.component';
   imports: [
     CommonModule, RouterModule, ReactiveFormsModule,
   ],
-  exports: [ListComponent, ViewComponent, AddComponent]
+  exports: [ListComponent, ViewComponent, AddComponent, EditComponent]
 })
 export class ContactsModule { }

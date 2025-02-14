@@ -23,4 +23,14 @@ export class ContactsService {
   public addContact(contact: Contact): void {
     this.contacts.push({...contact, id: this.currentId++})
   }
+
+  public editContact(id: number | null, updatedValues: Contact): void {
+    const contact = this.contacts.find(c => c.id == id);
+    if (contact) {
+      contact.firstName = updatedValues.firstName;
+      contact.lastName = updatedValues.lastName;
+      contact.street = updatedValues.street;
+      contact.city = updatedValues.city;
+    }
+  }
 }

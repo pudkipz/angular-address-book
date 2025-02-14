@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListComponent } from './list/list.component';
+import { ViewComponent } from './view/view.component';
+import { RouterModule } from '@angular/router';
 
 
 
 @NgModule({
-  declarations: [ListComponent],
+  declarations: [ListComponent, ViewComponent],
   imports: [
-    CommonModule
+    CommonModule, RouterModule,
   ],
-  exports: [ListComponent]
+  exports: [ListComponent, ViewComponent]
 })
 export class ContactsModule { }

@@ -1,1 +1,7 @@
-<p>add works!</p>
+<h2>Add new contact</h2>
+<form [formGroup]="contactForm" (submit)="addContact()">
+  <div>
+    <label for="first-name">First name</label>
+    <input type="text" id="first-name" formControlName="firstName" />
+  </div>
+</form>
